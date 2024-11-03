@@ -12,7 +12,7 @@ func fibonacci(n int) int {
 	return fibonacci(n-1) + fibonacci(n-2)
 }
 
-func callAPIWithRetries(maxRetries int) {
+func CallAPIWithRetries(maxRetries int) {
 	attempt := 0
 	for attempt = 1; attempt <= maxRetries; attempt++ {
 		success := makeAPICall(attempt)
@@ -31,7 +31,4 @@ func callAPIWithRetries(maxRetries int) {
 
 func makeAPICall(n int) bool {
 	return n == 5
-}
-func main() {
-	callAPIWithRetries(6)
 }
